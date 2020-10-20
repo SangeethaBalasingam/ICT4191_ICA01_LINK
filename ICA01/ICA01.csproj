@@ -126,6 +126,10 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="App_Data\RealStateDb.mdf" />
+    <Content Include="App_Data\RealStateDb_log.ldf">
+      <DependentUpon>RealStateDb.mdf</DependentUpon>
+    </Content>
     <Content Include="Global.asax" />
     <Content Include="scripts\ai.0.22.9-build00167.js" />
     <Content Include="scripts\ai.0.22.9-build00167.min.js" />
@@ -136,8 +140,18 @@
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202010200623440_sam.cs" />
+    <Compile Include="Migrations\202010200623440_sam.designer.cs">
+      <DependentUpon>202010200623440_sam.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202010200627210_sample2.cs" />
+    <Compile Include="Migrations\202010200627210_sample2.designer.cs">
+      <DependentUpon>202010200627210_sample2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Branch.cs" />
     <Compile Include="Models\Owner.cs" />
+    <Compile Include="Models\RealStateContext.cs" />
     <Compile Include="Models\Rent.cs" />
     <Compile Include="Models\Staff.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -156,8 +170,15 @@
     </None>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="App_Data\" />
     <Folder Include="Controllers\" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\202010200623440_sam.resx">
+      <DependentUpon>202010200623440_sam.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010200627210_sample2.resx">
+      <DependentUpon>202010200627210_sample2.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

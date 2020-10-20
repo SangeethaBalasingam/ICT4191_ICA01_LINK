@@ -7,6 +7,7 @@ using System.Web;
 
 namespace ICA01.Models
 {
+    [Table("Rent_tbl")]
     public class Rent
     {
         [Key]
@@ -17,11 +18,17 @@ namespace ICA01.Models
         public String Rooms { get; set; }
         public String RefOwnernumber { get; set; }
         [ForeignKey("RefOwnernumber")]
+        public virtual Owner Owners { get; set; }
         public String RefStaffNo { get; set; }
-        [ForeignKey("RefstaffNo")]
+        [ForeignKey("RefStaffNo ")]
+        public virtual Staff Staffs { get; set; } 
         public String RefBranchNo { get; set; }
         [ForeignKey("RefBranchNo")]
+        public virtual Branch Branchs { get; set; }
         public String Rent1 { get; set; }
+        public virtual Rent Rents { get; set; }
+
+
 
 
 

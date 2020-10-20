@@ -7,6 +7,7 @@ using System.Web;
 
 namespace ICA01.Models
 {
+    [Table("Staff_tbl")]
     public class Staff
     {
         [Key]
@@ -18,5 +19,7 @@ namespace ICA01.Models
         public int salary { get; set; }
         public String Branchref { get; set; }
         [ForeignKey("Branchref")]
+        public virtual Branch Branch { get; set; }
+        public List<Rent> Rents { get; set; }
     }
 }
