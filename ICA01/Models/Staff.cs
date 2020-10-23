@@ -15,6 +15,8 @@ namespace ICA01.Models
         public String Fname { get; set; }
         public String Lname { get; set; }
         public String Position { get; set; }
+        [Column(TypeName = "Date")]
+        [DataType(DataType.Date)]
         public DateTime DOB { get; set; }
         public int salary { get; set; }
         public String Branchref { get; set; }
