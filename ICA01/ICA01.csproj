@@ -146,6 +146,8 @@
   <ItemGroup>
     <Compile Include="Controllers\App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BranchController.cs" />
+    <Compile Include="Controllers\OwnerController.cs" />
+    <Compile Include="Controllers\RentController.cs" />
     <Compile Include="Controllers\StaffController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -170,6 +172,10 @@
     <Compile Include="Migrations\202010230556179_sample21.designer.cs">
       <DependentUpon>202010230556179_sample21.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202010231118244_sample.cs" />
+    <Compile Include="Migrations\202010231118244_sample.Designer.cs">
+      <DependentUpon>202010231118244_sample.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Branch.cs" />
     <Compile Include="Models\Owner.cs" />
@@ -186,13 +192,25 @@
     </Content>
     <Content Include="Views\Branch\Create.cshtml" />
     <Content Include="Views\Branch\Index.cshtml" />
-    <Content Include="Views\Branch\Details.cshtml" />
-    <Content Include="Views\Branch\Edit.cshtml" />
     <Content Include="Views\Staff\Create.cshtml" />
     <Content Include="Views\Staff\Index.cshtml" />
     <Content Include="scripts\jquery-1.10.2.min.map" />
     <Content Include="Views\Staff\Details.cshtml" />
-    <Content Include="Views\Staff\Update.cshtml" />
+    <Content Include="Views\Owner\Create.cshtml" />
+    <Content Include="Views\Owner\Index.cshtml" />
+    <Content Include="Views\Owner\Details.cshtml" />
+    <Content Include="Views\Staff\Edit.cshtml" />
+    <Content Include="Views\Staff\Delete.cshtml" />
+    <Content Include="Views\Branch\Details.cshtml" />
+    <Content Include="Views\Branch\Edit.cshtml" />
+    <Content Include="Views\Branch\Delete.cshtml" />
+    <Content Include="Views\Owner\Edit.cshtml" />
+    <Content Include="Views\Owner\Delete.cshtml" />
+    <Content Include="Views\Rent\Create.cshtml" />
+    <Content Include="Views\Rent\Details.cshtml" />
+    <Content Include="Views\Rent\Index.cshtml" />
+    <Content Include="Views\Rent\Edit.cshtml" />
+    <Content Include="Views\Rent\Delete.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>
@@ -216,6 +234,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202010230556179_sample21.resx">
       <DependentUpon>202010230556179_sample21.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202010231118244_sample.resx">
+      <DependentUpon>202010231118244_sample.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

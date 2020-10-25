@@ -35,18 +35,38 @@ namespace ICA01.Controllers
             Staff Stafs = RealState.Staffs.SingleOrDefault(x => x.StaffNo == id);
             return View(Stafs);
         }
-        public ActionResult Update(String id)
+        public ActionResult Edit(String id)
         {
-            ViewBag.Branchin = new SelectList(RealState.Branchs, "BranchNo", "Street", "Branchref");
+            ViewBag.Braninfro = new SelectList( RealState.Branchs, "BranchNo", "Street", "Branchref");
             Staff Stafs = RealState.Staffs.SingleOrDefault(x => x.StaffNo == id);
             return View(Stafs);
-            
         }
         [HttpPost]
-        public ActionResult Update()
+        public ActionResult Edit(String id, Staff UpdateStaf)
         {
-            return View();
+            Staff Stafs = RealState.Staffs.SingleOrDefault(x => x.StaffNo == id);
+            Stafs.Fname = UpdateStaf.Fname;
+            Stafs.Lname = UpdateStaf.Lname;
+            Stafs.Position = UpdateStaf.Position;
+            Stafs.DOB = UpdateStaf.DOB;
+            Stafs.salary = UpdateStaf.salary;
+            Stafs.Branchref = UpdateStaf.Branchref;
+            RealState.SaveChanges();
+            return RedirectToAction("Index");
         }
-
+        public ActionResult Delete(String id)
+        {
+            
+            Staff Stafs = RealState.Staffs.SingleOrDefault(x => x.StaffNo == id);
+            return View(Stafs);
+        }
+        [HttpPost,ActionName("Delete")]
+        public ActionResult DeleteEmployee(String id)
+        {
+            Staff Stafs = RealState.Staffs.SingleOrDefault(x => x.StaffNo == id);
+            RealState.Staffs.Remove(Stafs);
+            RealState.SaveChanges();
+            return RedirectToAction("Index");
+        }
     }
 }

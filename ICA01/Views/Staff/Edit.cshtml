@@ -9,14 +9,9 @@
 <html>
 <head>
     <meta name="viewport" content="width=device-width" />
-    <title>Update</title>
+    <title>Edit</title>
 </head>
 <body>
-    <script src="~/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="~/Scripts/jquery.validate.min.js"></script>
-    <script src="~/Scripts/jquery.validate.unobtrusive.min.js"></script>
-    
-    
     @using (Html.BeginForm())
     {
         @Html.AntiForgeryToken()
@@ -70,7 +65,7 @@
             <div class="form-group">
                 @Html.LabelFor(model => model.Branchref, "Branchref", htmlAttributes: new { @class = "control-label col-md-2" })
                 <div class="col-md-10">
-                    @Html.DropDownListFor(model => model.Branchref, ViewBag.Branchin as SelectList, htmlAttributes: new { @class = "form-control" })
+                    @Html.DropDownListFor(model => model.Branchref, ViewBag.Braninfro as SelectList, htmlAttributes: new { @class = "form-control" })
                     @Html.ValidationMessageFor(model => model.Branchref, "", new { @class = "text-danger" })
                 </div>
             </div>

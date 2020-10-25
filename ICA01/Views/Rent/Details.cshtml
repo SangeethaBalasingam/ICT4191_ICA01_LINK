@@ -1,0 +1,90 @@
+﻿@model ICA01.Models.Rent
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>Details</title>
+</head>
+<body>
+    <div>
+        <h4>Rent</h4>
+        <hr />
+        <dl class="dl-horizontal">
+            <dt>
+                @Html.DisplayNameFor(model => model.Branchs.Street)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Branchs.Street)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Owners.Fname)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Owners.Fname)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Staffs.Fname)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Staffs.Fname)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Street)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Street)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.City)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.City)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Ptype)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Ptype)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Rooms)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Rooms)
+            </dd>
+    
+            <dt>
+                @Html.DisplayNameFor(model => model.Rent1)
+            </dt>
+    
+            <dd>
+                @Html.DisplayFor(model => model.Rent1)
+            </dd>
+    
+        </dl>
+    </div>
+    <p>
+        @Html.ActionLink("Edit", "Edit", new { id = Model.PropertyNo }) |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+</body>
+</html>

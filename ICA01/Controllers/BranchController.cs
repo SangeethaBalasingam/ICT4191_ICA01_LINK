@@ -25,23 +25,42 @@ namespace ICA01.Controllers
         {
             RealState.Branchs.Add(Branches);
             RealState.SaveChanges();
-            return Redirect("Index");
+            return RedirectToAction("Index");
         }
-        public ActionResult Details(String BId)
+        public ActionResult Details( String id)
         {
-            Branch Branches = RealState.Branchs.SingleOrDefault(x => x.BranchNo == BId);
-            return View(Branches);
+            Branch branches = RealState.Branchs.SingleOrDefault(x => x.BranchNo == id);
+            return View(branches);
         }
-        public ActionResult Edit(String BId)
+        public ActionResult Edit(String id)
         {
-            Branch Branches = RealState.Branchs.SingleOrDefault(x => x.BranchNo == BId);
-            return View(Branches);
-           // return View();
+            Branch branches = RealState.Branchs.SingleOrDefault(x => x.BranchNo == id);
+            return View(branches);
         }
         [HttpPost]
-        public ActionResult Edit()
+        public ActionResult Edit(String id, Branch UpdateBranches)
         {
+            Branch branches = RealState.Branchs.SingleOrDefault(x => x.BranchNo == id);
+            branches.Street = UpdateBranches.Street;
+            branches.City = UpdateBranches.City;
+            branches.PostCode = UpdateBranches.PostCode;
+            RealState.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        public ActionResult Delete(String id)
+        {
+            Branch branches = RealState.Branchs.SingleOrDefault(x => x.BranchNo == id);
             return View();
         }
+        [HttpPost,ActionName("DeleteBranch")]
+        public ActionResult DeleteBranch(String id)
+        {
+            Branch branches = RealState.Branchs.SingleOrDefault(x => x.BranchNo == id);
+            RealState.Branchs.Remove(branches);
+            RealState.SaveChanges();
+            return RedirectToAction("Index");
+        }
+        
+       
     }
 }
