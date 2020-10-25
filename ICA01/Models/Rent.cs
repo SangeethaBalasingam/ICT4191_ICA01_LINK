@@ -16,12 +16,15 @@ namespace ICA01.Models
         public String City { get; set; }
         public String Ptype { get; set; }
         public String Rooms { get; set; }
+        [Display(Name ="Owner")]
         public String RefOwnernumber { get; set; }
         [ForeignKey("RefOwnernumber")]
         public virtual Owner Owners { get; set; }
+        [Display(Name = "Staff")]
         public String RefStaffNo { get; set; }
         [ForeignKey("RefStaffNo ")]
-        public virtual Staff Staffs { get; set; } 
+        public virtual Staff Staffs { get; set; }
+        [Display(Name = "Branch")]
         public String RefBranchNo { get; set; }
         [ForeignKey("RefBranchNo")]
         public virtual Branch Branchs { get; set; }

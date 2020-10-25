@@ -1,0 +1,38 @@
+﻿@model List<ICA01.Models.Staff>
+@using ICA01.Models;
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>FliterStaff</title>
+</head>
+<body>
+    <div> 
+        <h1>Fliter Staff Details</h1>
+        <table border="1">
+            <tr>
+                <td>StaffNumber</td>
+                <td>StaffPostion</td>
+                <td>Firstname</td>
+                <td>Lastname</td>
+             </tr>
+            @foreach (Staff stafs in Model)
+            {
+                <tr>
+
+                    <td>@stafs.StaffNo</td>
+                    <td>@stafs.Fname</td>
+                    <td>@stafs.Lname</td>
+                    <td>@stafs.Position</td>
+                </tr>
+            }
+            </table>
+    </div>
+</body>
+</html>

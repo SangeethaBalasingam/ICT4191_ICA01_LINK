@@ -1,0 +1,33 @@
+﻿@model List<ICA01.Models.Rent>
+@using ICA01.Models;
+
+
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta name="viewport" content="width=device-width" />
+    <title>FliterBuliding</title>
+</head>
+<body>
+    <div> 
+        <table border="1">
+            <tr>
+              <td>Buliding Number</td>
+               <td>City</td>              
+            </tr>
+            @foreach (Rent Ren in Model)
+            { 
+              <tr>
+                <td>@Ren.PropertyNo</td>
+                <td>@Ren.City</td>
+              </tr>
+            }
+        </table>
+    </div>
+</body>
+</html>

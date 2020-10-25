@@ -146,6 +146,7 @@
   <ItemGroup>
     <Compile Include="Controllers\App_Start\RouteConfig.cs" />
     <Compile Include="Controllers\BranchController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\OwnerController.cs" />
     <Compile Include="Controllers\RentController.cs" />
     <Compile Include="Controllers\StaffController.cs" />
@@ -211,6 +212,10 @@
     <Content Include="Views\Rent\Index.cshtml" />
     <Content Include="Views\Rent\Edit.cshtml" />
     <Content Include="Views\Rent\Delete.cshtml" />
+    <Content Include="Views\Home\NofBuliding.cshtml" />
+    <Content Include="Views\Home\FliterStaff.cshtml" />
+    <Content Include="Views\Home\FliterBuliding.cshtml" />
+    <Content Include="Views\Home\BranchCount.cshtml" />
     <None Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
     </None>

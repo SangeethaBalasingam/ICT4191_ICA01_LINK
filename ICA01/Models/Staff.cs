@@ -19,6 +19,7 @@ namespace ICA01.Models
         [DataType(DataType.Date)]
         public DateTime DOB { get; set; }
         public int salary { get; set; }
+        [Display(Name="Branch")]
         public String Branchref { get; set; }
         [ForeignKey("Branchref")]
         public virtual Branch Branch { get; set; }

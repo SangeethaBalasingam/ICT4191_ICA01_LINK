@@ -11,6 +11,7 @@ namespace ICA01.Models
     public class Branch
     {
         [Key]
+        [Display(Name ="BranchNumber")]
         public String BranchNo { get; set; }
         public String Street { get; set; }
         public String City { get; set; }

@@ -12,7 +12,9 @@ namespace ICA01.Models
     {
         [Key]
         public String OwnerNo { get; set; }
+        [Display(Name ="FirstName")]
         public String Fname { get; set; }
+        [Display(Name = "LastName")]
         public String Lname { get; set; }
         public String Address { get; set; }
         public int telPhoneNumber { get; set; }
